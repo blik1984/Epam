@@ -3,7 +3,7 @@
  * На плоскости с помощью координат заданы точки. Определить между какими точками наибольшее расстояние
  */
 
-package by.epam.algorithm.decomp;
+package by.epam.java.algorithm.decomp;
 
 import java.lang.Math;
 

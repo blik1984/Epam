@@ -16,7 +16,7 @@
  * от самопересекающихся я не знаю, а для самопересекающихся моей математики не хватает.
  */
 
-package by.epam.algorithm.decomp;
+package by.epam.java.algorithm.decomp;
 
 public class Decomp9 {
 	

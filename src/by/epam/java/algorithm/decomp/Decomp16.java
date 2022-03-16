@@ -6,7 +6,7 @@
  *Определить сколько чётных цифр в полученой сумме.
  */
 
-package by.epam.algorithm.decomp;
+package by.epam.java.algorithm.decomp;
 
 import java.util.ArrayList;
 

@@ -8,7 +8,7 @@
  * Предполагаем что цифры в массиве будут идти в том же порядке, что и в исходном числе
  */
 
-package by.epam.algorithm.decomp;
+package by.epam.java.algorithm.decomp;
 
 import java.util.ArrayList;
 

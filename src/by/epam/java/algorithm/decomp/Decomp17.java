@@ -10,7 +10,7 @@
  * неясно с каким знаком брать отдельные цифры. 
  */
 
-package by.epam.algorithm.decomp;
+package by.epam.java.algorithm.decomp;
 
 import java.util.ArrayList;
 

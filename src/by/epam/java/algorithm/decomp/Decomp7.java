@@ -10,7 +10,7 @@
  */
 
 
-package by.epam.algorithm.decomp;
+package by.epam.java.algorithm.decomp;
 
 import java.util.Scanner;
 
