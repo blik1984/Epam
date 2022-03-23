@@ -1,6 +1,6 @@
 /* Algorithmization
- * Одномерные массивы, задание 1
- * Найти сумму элементов массива, которые кратны заданному числу.
+ * РћРґРЅРѕРјРµСЂРЅС‹Рµ РјР°СЃСЃРёРІС‹, Р·Р°РґР°РЅРёРµ 1
+ * РќР°Р№С‚Рё СЃСѓРјРјСѓ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°, РєРѕС‚РѕСЂС‹Рµ РєСЂР°С‚РЅС‹ Р·Р°РґР°РЅРЅРѕРјСѓ С‡РёСЃР»Сѓ.
  */
 
 package by.epam.java.algorithm.mas1;
@@ -17,10 +17,10 @@ public class mas1_1 {
 		
 		@SuppressWarnings("resource")
 		Scanner S = new Scanner(System.in);
-		System.out.println("Введите размер массива"); 
+		System.out.println("Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР°"); 
 		n1 = S.nextInt();
 		int[] N = new int[n1];
-		System.out.println("Введите делитель"); 
+		System.out.println("Р’РІРµРґРёС‚Рµ РґРµР»РёС‚РµР»СЊ"); 
 		K = S.nextInt();
 		
 		for (int i = 0; i < N.length; i++) // 
@@ -32,6 +32,7 @@ public class mas1_1 {
 				sum = sum + N[i];
 			}
 		}
-		System.out.println("Сумма элементов массива кратных " + K + " = " + sum);
+		System.out.println("РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР° РєСЂР°С‚РЅС‹С… " + K + " = " + sum);
 	}
 }
+
