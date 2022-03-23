@@ -1,12 +1,12 @@
 
 /* Algorithmization
- * Декомпозиция, задание 7
- * Написать метод, который суммирует факториалы всех нечётных чисел от 1 до 9.
+ * Р”РµРєРѕРјРїРѕР·РёС†РёСЏ, Р·Р°РґР°РЅРёРµ 7
+ * РќР°РїРёСЃР°С‚СЊ РјРµС‚РѕРґ, РєРѕС‚РѕСЂС‹Р№ СЃСѓРјРјРёСЂСѓРµС‚ С„Р°РєС‚РѕСЂРёР°Р»С‹ РІСЃРµС… РЅРµС‡С‘С‚РЅС‹С… С‡РёСЃРµР» РѕС‚ 1 РґРѕ 9.
  */
 
 /*
- * Реализован выбор: чётные, нечётные, все. С любой границей начала и окончания диапазона.
- * Хотя учитывая размер INT смысла в этом немного)))
+ * Р РµР°Р»РёР·РѕРІР°РЅ РІС‹Р±РѕСЂ: С‡С‘С‚РЅС‹Рµ, РЅРµС‡С‘С‚РЅС‹Рµ, РІСЃРµ. РЎ Р»СЋР±РѕР№ РіСЂР°РЅРёС†РµР№ РЅР°С‡Р°Р»Р° Рё РѕРєРѕРЅС‡Р°РЅРёСЏ РґРёР°РїР°Р·РѕРЅР°.
+ * РҐРѕС‚СЏ СѓС‡РёС‚С‹РІР°СЏ СЂР°Р·РјРµСЂ INT СЃРјС‹СЃР»Р° РІ СЌС‚РѕРј РЅРµРјРЅРѕРіРѕ)))
  */
 
 
@@ -25,30 +25,30 @@ public class Decomp7 {
 	int sumFactorial = 0;
 	String stepVal = null;
 	
-	System.out.println("Начало диапазона."); 
+	System.out.println("РќР°С‡Р°Р»Рѕ РґРёР°РїР°Р·РѕРЅР°."); 
 	startBorder = chekIntPositive();
-	System.out.println("Конец диапазона."); 
+	System.out.println("РљРѕРЅРµС† РґРёР°РїР°Р·РѕРЅР°."); 
 	stopBorder = chekIntPositive();
 	
 	while (stopBorder<startBorder) {
 		
-		System.out.println("Конец диапазона должен быть больше или равен " + startBorder + "Повторите выбор."); 
+		System.out.println("РљРѕРЅРµС† РґРёР°РїР°Р·РѕРЅР° РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ РёР»Рё СЂР°РІРµРЅ " + startBorder + "РџРѕРІС‚РѕСЂРёС‚Рµ РІС‹Р±РѕСЂ."); 
 		stopBorder = chekIntPositive();
 	}
 	
-	System.out.println("Нечётные - введите 1. Чётные - введите 2. Все числа - введите 3."); 
+	System.out.println("РќРµС‡С‘С‚РЅС‹Рµ - РІРІРµРґРёС‚Рµ 1. Р§С‘С‚РЅС‹Рµ - РІРІРµРґРёС‚Рµ 2. Р’СЃРµ С‡РёСЃР»Р° - РІРІРµРґРёС‚Рµ 3."); 
 	stepFlag = chekIntPositive();
 	while (stepFlag>3) {
-		System.out.println("Нечётные - введите 1. Чётные - введите 2. Все числа - введите 3."); 
+		System.out.println("РќРµС‡С‘С‚РЅС‹Рµ - РІРІРµРґРёС‚Рµ 1. Р§С‘С‚РЅС‹Рµ - РІРІРµРґРёС‚Рµ 2. Р’СЃРµ С‡РёСЃР»Р° - РІРІРµРґРёС‚Рµ 3."); 
 		stepFlag = chekIntPositive();
 	}
 	
 	if (stepFlag == 1) {
-		stepVal = "нечётных";
+		stepVal = "РЅРµС‡С‘С‚РЅС‹С…";
 	} else if (stepFlag == 2) {
-		stepVal = "чётных";
+		stepVal = "С‡С‘С‚РЅС‹С…";
 	}else if (stepFlag == 3) {
-		stepVal = "всех";
+		stepVal = "РІСЃРµС…";
 	}
 	
 	if (stepFlag == 1) {
@@ -74,19 +74,19 @@ public class Decomp7 {
 		check = sumFactorial/10 + factorial(i)/10;
 		
 		if ( check > (2147483647/10)) {
-			System.out.println("Значение слишком большое, его невозможно посчитать в данном приложении"); 
+			System.out.println("Р—РЅР°С‡РµРЅРёРµ СЃР»РёС€РєРѕРј Р±РѕР»СЊС€РѕРµ, РµРіРѕ РЅРµРІРѕР·РјРѕР¶РЅРѕ РїРѕСЃС‡РёС‚Р°С‚СЊ РІ РґР°РЅРЅРѕРј РїСЂРёР»РѕР¶РµРЅРёРё"); 
 			return;
 		}
 
 		sumFactorial = sumFactorial + factorial(i);
 	}
 	
-	System.out.println("Сумма факториалов " + stepVal + " чисел от " + startBorder + 
-			" до " + stopBorder + " равна " + sumFactorial); 
+	System.out.println("РЎСѓРјРјР° С„Р°РєС‚РѕСЂРёР°Р»РѕРІ " + stepVal + " С‡РёСЃРµР» РѕС‚ " + startBorder + 
+			" РґРѕ " + stopBorder + " СЂР°РІРЅР° " + sumFactorial); 
 	}
 	
 	/*
-	 * Проверка на положительное и целое
+	 * РџСЂРѕРІРµСЂРєР° РЅР° РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ Рё С†РµР»РѕРµ
 	 */
 	public static int chekIntPositive () {
 		
@@ -95,11 +95,11 @@ public class Decomp7 {
 		
 	@SuppressWarnings("resource")
 	Scanner S = new Scanner(System.in);
-	System.out.println("Введите число"); 
+	System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ"); 
 	num = S.nextDouble();
 	while (num<1||num%1 != 0) {
 		
-		System.out.println("Число должно быть целым положительным. Повторите выбор"); 
+		System.out.println("Р§РёСЃР»Рѕ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ С†РµР»С‹Рј РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рј. РџРѕРІС‚РѕСЂРёС‚Рµ РІС‹Р±РѕСЂ"); 
 		num = S.nextDouble();
 	}
 	val = (int)num;
@@ -107,7 +107,7 @@ public class Decomp7 {
 	}
 	
 	/*
-	 * Определяем факториал переданного числа
+	 * РћРїСЂРµРґРµР»СЏРµРј С„Р°РєС‚РѕСЂРёР°Р» РїРµСЂРµРґР°РЅРЅРѕРіРѕ С‡РёСЃР»Р°
 	 */
 	public static int factorial (int val) {
 		
