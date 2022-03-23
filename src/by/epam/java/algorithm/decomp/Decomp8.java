@@ -1,11 +1,11 @@
 
 /* Algorithmization
- * Декомпозиция, задание 8
- * Написать метод, который суммирует три последовательных элемента моссива от k до m.
+ * Р”РµРєРѕРјРїРѕР·РёС†РёСЏ, Р·Р°РґР°РЅРёРµ 8
+ * РќР°РїРёСЃР°С‚СЊ РјРµС‚РѕРґ, РєРѕС‚РѕСЂС‹Р№ СЃСѓРјРјРёСЂСѓРµС‚ С‚СЂРё РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅС‹С… СЌР»РµРјРµРЅС‚Р° РјРѕСЃСЃРёРІР° РѕС‚ k РґРѕ m.
  */
 
 /*
- * Реализовано суммирование произвольного количества элементов от k до m.
+ * Р РµР°Р»РёР·РѕРІР°РЅРѕ СЃСѓРјРјРёСЂРѕРІР°РЅРёРµ РїСЂРѕРёР·РІРѕР»СЊРЅРѕРіРѕ РєРѕР»РёС‡РµСЃС‚РІР° СЌР»РµРјРµРЅС‚РѕРІ РѕС‚ k РґРѕ m.
  */
 
 package by.epam.java.algorithm.decomp;
@@ -23,10 +23,10 @@ public class Decomp8 {
 		int N [] = {50,3,9,4,-5,6,5,2,6,54,841,19,864,-841,6842,428,824,428,817,874,89,1,8,5,6,62000,2147483646};
 
 		
-		System.out.println("В массиве " + N.length + " чисел. С какого числа суммируем?"); 
+		System.out.println("Р’ РјР°СЃСЃРёРІРµ " + N.length + " С‡РёСЃРµР». РЎ РєР°РєРѕРіРѕ С‡РёСЃР»Р° СЃСѓРјРјРёСЂСѓРµРј?"); 
 		startBorder = chekIndex(N);
 		
-		System.out.println("Сколько чисел суммируем? "); 
+		System.out.println("РЎРєРѕР»СЊРєРѕ С‡РёСЃРµР» СЃСѓРјРјРёСЂСѓРµРј? "); 
 		quantityVal = checkQuantity(N, startBorder);
 		
 		for (int i = startBorder; i<(startBorder+quantityVal); i++) {
@@ -35,18 +35,18 @@ public class Decomp8 {
 			int K[] = {sum, N[i]};
 			checkSum = checkSum(K);
 			if (checkSum == 1) {
-				System.out.println("Приложение не может посчитать сумму, она слишком большая"); 
+				System.out.println("РџСЂРёР»РѕР¶РµРЅРёРµ РЅРµ РјРѕР¶РµС‚ РїРѕСЃС‡РёС‚Р°С‚СЊ СЃСѓРјРјСѓ, РѕРЅР° СЃР»РёС€РєРѕРј Р±РѕР»СЊС€Р°СЏ"); 
 				return;
 			}
 			
 			sum = sum+N[i];				 
 		}
 		
-		System.out.println("Сумма " + quantityVal + " чисел начиная с " + (startBorder+1) + "-го равна " + sum); 
+		System.out.println("РЎСѓРјРјР° " + quantityVal + " С‡РёСЃРµР» РЅР°С‡РёРЅР°СЏ СЃ " + (startBorder+1) + "-РіРѕ СЂР°РІРЅР° " + sum); 
 		
 	}
 	/*
-	 * Проверка индекса на существование
+	 * РџСЂРѕРІРµСЂРєР° РёРЅРґРµРєСЃР° РЅР° СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёРµ
 	 */
 	public static int chekIndex (int N[]) {
 		
@@ -55,16 +55,16 @@ public class Decomp8 {
 		
 	@SuppressWarnings("resource")
 	Scanner S = new Scanner(System.in);
-	System.out.println("Введите число"); 
+	System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ"); 
 	num = S.nextDouble();
 	while (num<=0||num%1 != 0) {
 		
-		System.out.println("Число должно быть целым и положительным. Повторите выбор"); 
+		System.out.println("Р§РёСЃР»Рѕ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ С†РµР»С‹Рј Рё РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рј. РџРѕРІС‚РѕСЂРёС‚Рµ РІС‹Р±РѕСЂ"); 
 		num = S.nextDouble();
 	}
 	
 	while (num > N.length) {
-		System.out.println("У нас нет столько цифр. Выберите номер цифру от 1 до " + (N.length +1)); 
+		System.out.println("РЈ РЅР°СЃ РЅРµС‚ СЃС‚РѕР»СЊРєРѕ С†РёС„СЂ. Р’С‹Р±РµСЂРёС‚Рµ РЅРѕРјРµСЂ С†РёС„СЂСѓ РѕС‚ 1 РґРѕ " + (N.length +1)); 
 		num = S.nextDouble();
 	}
 	
@@ -73,7 +73,7 @@ public class Decomp8 {
 	}
 	
 	/*
-	 *Проверка количества суммируемых чисел на возможность существования
+	 *РџСЂРѕРІРµСЂРєР° РєРѕР»РёС‡РµСЃС‚РІР° СЃСѓРјРјРёСЂСѓРµРјС‹С… С‡РёСЃРµР» РЅР° РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёСЏ
 	 */
 	public static int checkQuantity (int N[], int startBorder) {
 		
@@ -82,16 +82,16 @@ public class Decomp8 {
 		
 		@SuppressWarnings("resource")
 		Scanner S = new Scanner(System.in);
-		System.out.println("Введите число"); 
+		System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ"); 
 		num = S.nextDouble();
 		while (num<=0||num%1 != 0) {
 			
-			System.out.println("Число должно быть целым и положительным. Повторите выбор"); 
+			System.out.println("Р§РёСЃР»Рѕ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ С†РµР»С‹Рј Рё РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рј. РџРѕРІС‚РѕСЂРёС‚Рµ РІС‹Р±РѕСЂ"); 
 			num = S.nextDouble();
 		}
 		while ((startBorder + num)>N.length) {
 			
-			System.out.println("Слишком большое число. Повторите выбор"); 
+			System.out.println("РЎР»РёС€РєРѕРј Р±РѕР»СЊС€РѕРµ С‡РёСЃР»Рѕ. РџРѕРІС‚РѕСЂРёС‚Рµ РІС‹Р±РѕСЂ"); 
 			num = S.nextDouble();
 		}
 		quantityVal = (int)num;
@@ -99,7 +99,7 @@ public class Decomp8 {
 	}
 	
 	/*
-	 * Проверка суммы на выход за INT
+	 * РџСЂРѕРІРµСЂРєР° СЃСѓРјРјС‹ РЅР° РІС‹С…РѕРґ Р·Р° INT
 	 */
 	public static int checkSum (int K[]) {
 		
@@ -116,3 +116,4 @@ public class Decomp8 {
 		return checkSum;
 	}
 }
+
