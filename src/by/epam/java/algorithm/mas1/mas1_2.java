@@ -1,6 +1,6 @@
 /* Algorithmization
- * Одномерные массивы, задание 2
- * заменить  элементы массива, которые больше заданного числа этим числом
+ * РћРґРЅРѕРјРµСЂРЅС‹Рµ РјР°СЃСЃРёРІС‹, Р·Р°РґР°РЅРёРµ 2
+ * Р·Р°РјРµРЅРёС‚СЊ  СЌР»РµРјРµРЅС‚С‹ РјР°СЃСЃРёРІР°, РєРѕС‚РѕСЂС‹Рµ Р±РѕР»СЊС€Рµ Р·Р°РґР°РЅРЅРѕРіРѕ С‡РёСЃР»Р° СЌС‚РёРј С‡РёСЃР»РѕРј
  */
 
 package by.epam.java.algorithm.mas1;
@@ -13,14 +13,14 @@ public class mas1_2 {
 		
 		int n1;
 		double Z;
-		int count = 0; // счётчик замен
+		int count = 0; // СЃС‡С‘С‚С‡РёРє Р·Р°РјРµРЅ
 		
 		@SuppressWarnings("resource")
 		Scanner S = new Scanner(System.in);
-		System.out.println("Введите размер массива"); 
+		System.out.println("Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР°"); 
 		n1 = S.nextInt();
 		double[] N = new double[n1];
-		System.out.println("Образец Z"); 
+		System.out.println("РћР±СЂР°Р·РµС† Z"); 
 		Z = S.nextDouble();
 		
 		
@@ -35,6 +35,7 @@ public class mas1_2 {
 				count++; 
 			}
 		}
-		System.out.println("Количество произведённых замен = " + count);
+		System.out.println("РљРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРѕРёР·РІРµРґС‘РЅРЅС‹С… Р·Р°РјРµРЅ = " + count);
 	}
 }
+
