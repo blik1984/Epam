@@ -1,5 +1,5 @@
 /* Algorithmization
-Сортировка выбором
+РЎРѕСЂС‚РёСЂРѕРІРєР° РІС‹Р±РѕСЂРѕРј
  */
 
 package by.epam.java.algorithm.mas1sort;
@@ -11,7 +11,7 @@ public class Sort3 {
 
 		int[] N = {0, 6, 7, 9, 12, 17, 19, 19, 45, 82, 99, 107, 109, 110, 125, 159, 257, 336, 395, 692};
 				
-		System.out.println("Начальная последовательность: ");
+		System.out.println("РќР°С‡Р°Р»СЊРЅР°СЏ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ: ");
 		for (int i = 0; i < N.length; i++) {
 			
 			System.out.print(N[i]+", ");
@@ -39,7 +39,7 @@ public class Sort3 {
 			}
 		}
 		
-		System.out.println("\nОтсортированная последовательность: ");
+		System.out.println("\nРћС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅР°СЏ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ: ");
 		for (int i = 0; i < N.length; i++) {
 			
 			System.out.print(N[i]+", ");
