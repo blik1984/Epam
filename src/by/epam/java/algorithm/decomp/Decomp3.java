@@ -1,8 +1,8 @@
 /* Algorithmization
- * Äåêîìïîçèöèÿ, çàäàíèå 3
- * Âû÷èñëèòü ïëîùàäü ïðàâèëüíîãî øåñòèóãîëüíèêà ñ èçâåñòíîé äëèíîé ñòîðîíû
- *  èñïîëüçóÿ ìåòîä âû÷èñëåíèÿ ïëîùàäè òðåóãîëüíèêà
- * Ñäåëàíî äëÿ ëþáîãî ïðàâèëüíîãî ìíîãîóãîëüíèêà 
+ * Декомпозиция, задание 3
+ * Вычислить площадь правильного шестиугольника с известной длиной стороны
+ *  используя метод вычисления площади треугольника
+ * Сделано для любого правильного многоугольника 
  */
 
 
@@ -24,19 +24,19 @@ public class Decomp3 {
 		
 		@SuppressWarnings("resource")
 		Scanner S = new Scanner(System.in);
-		System.out.println("Ââåäèòå ÷èñëî ñòîðîí ïðàâèëüíîãî ìíîãîóãîëüíèêà"); 
+		System.out.println("Введите число сторон правильного многоугольника"); 
 		double n = S.nextDouble();
 		
 		if (n < 3||n % 1 != 0) {
 			
-			System.out.println("Êîëè÷åñòâî óãëîâ äîëæíî âûðàæàòüñÿ öåëûì ÷èñëîì áîëüøå äâóõ."
-					+ "\n Çàïóñòèòå ïðîãðàììó çàíîâî è ïîâòîðèòå âûáîð"); 
+			System.out.println("Количество углов должно выражаться целым числом больше двух."
+					+ "\n Запустите программу заново и повторите выбор"); 
 			return;
 		} else {
 			
 			numAngle = (int)n;
 		}
-		System.out.println("Ââåäèòå ðàçìåð ñòîðîíû ïðàâèëüíîãî ìíîãîóãîëüíèêà"); 
+		System.out.println("Введите размер стороны правильного многоугольника"); 
 		length = S.nextDouble();
 		
 		sumAngle = 180*(numAngle-2);
@@ -44,7 +44,7 @@ public class Decomp3 {
 		square = numAngle * squareAngle(length, angle);
 		DecimalFormat Dec = new DecimalFormat ("#.##");
 		String SQ = Dec.format(square);
-		System.out.println("Ïëîùàäü ïðàâèëüíîãî "+numAngle+"-óãîëüíèêà ñî ñòîðîíîé "+ length + " ðàâíà " + SQ); 
+		System.out.println("Площадь правильного "+numAngle+"-угольника со стороной "+ length + " равна " + SQ); 
 		
 	}
 		
@@ -60,4 +60,4 @@ public class Decomp3 {
 		S = (length*length)/(4*(Math.tan(alphaRad)));	
 		return S;
 	}
-} 
+}
