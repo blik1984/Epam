@@ -1,6 +1,6 @@
 /* Algorithmization
- * Массивы массивов, задание 3
- * вывести на экран заданную строку и заданный столбец.
+ * РњР°СЃСЃРёРІС‹ РјР°СЃСЃРёРІРѕРІ, Р·Р°РґР°РЅРёРµ 3
+ * РІС‹РІРµСЃС‚Рё РЅР° СЌРєСЂР°РЅ Р·Р°РґР°РЅРЅСѓСЋ СЃС‚СЂРѕРєСѓ Рё Р·Р°РґР°РЅРЅС‹Р№ СЃС‚РѕР»Р±РµС†.
  */
 
 package by.epam.java.algorithm.mas_mas;
@@ -11,7 +11,7 @@ public class MasMas3 {
 
 	public static void main(String[] args) {
 
-		int[][] N = { // задаём матрицу
+		int[][] N = { // Р·Р°РґР°С‘Рј РјР°С‚СЂРёС†Сѓ
 				{ 1, 2, 9, 4, 8 }, 
 				{ 6, 7, 8, 9, 10 }, 
 				{ 11, 12, 13, 14, 2 }, 
@@ -21,25 +21,25 @@ public class MasMas3 {
 		
 		@SuppressWarnings("resource")
 		Scanner S = new Scanner(System.in);
-		System.out.println("Введите номер строки от 1 до " + (N.length)); 
+		System.out.println("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ СЃС‚СЂРѕРєРё РѕС‚ 1 РґРѕ " + (N.length)); 
 																			
 		int k;
 		int p;
 		
 		k= S.nextInt();
-		System.out.println("Введите номер столбца от 1 до " + (N[0].length));
+		System.out.println("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ СЃС‚РѕР»Р±С†Р° РѕС‚ 1 РґРѕ " + (N[0].length));
 		p = S.nextInt();
-		System.out.println("Строка № " + k);
+		System.out.println("РЎС‚СЂРѕРєР° в„– " + k);
 		
-		for (int i = 0; i < N.length; i++) {	// выводим заданную строку в виде строки
+		for (int i = 0; i < N.length; i++) {	// РІС‹РІРѕРґРёРј Р·Р°РґР°РЅРЅСѓСЋ СЃС‚СЂРѕРєСѓ РІ РІРёРґРµ СЃС‚СЂРѕРєРё
 		
 			System.out.print(N[k - 1][i] + ", ");
 		}
 		
 		System.out.println("");
-		System.out.println("Столбец № " + p);
+		System.out.println("РЎС‚РѕР»Р±РµС† в„– " + p);
 		
-		for (int i = 0; i < N[0].length; i++) {		// выводим заданный столбец в виде столбца
+		for (int i = 0; i < N[0].length; i++) {		// РІС‹РІРѕРґРёРј Р·Р°РґР°РЅРЅС‹Р№ СЃС‚РѕР»Р±РµС† РІ РІРёРґРµ СЃС‚РѕР»Р±С†Р°
 		
 			System.out.println(N[i][p - 1]); //
 		}
